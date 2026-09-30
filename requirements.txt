@@ -1,0 +1,2 @@
+# Local-only dependency for generating the separate sales-data-source repository.
+Faker>=37.0

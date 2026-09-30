@@ -1,0 +1,10 @@
+bundle:
+  name: sales_medallion_data_pipeline
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true

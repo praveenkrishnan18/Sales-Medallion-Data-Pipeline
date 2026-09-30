@@ -1,0 +1,26 @@
+# Databricks/local state
+.databricks/
+.bundle/
+*.log
+
+# Secrets / local config
+.env
+.env.*
+secrets/
+*.token
+*.pat
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated source data (source-data repo is separate)
+sales-data-source/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
