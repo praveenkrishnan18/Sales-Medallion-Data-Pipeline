@@ -4,37 +4,8 @@ A Databricks-centric Azure Data Engineering project that ingests external GitHub
 
 ## Architecture
 
-```text
-GitHub source data
-       |
-       v
-Databricks Serverless Job
-       |
-       +--> 01_ingest_raw.py
-       +--> 02_bronze.py
-       +--> 03_silver.py
-       +--> 04_gold.py
-       |
-       v
-ADLS Gen2 / Delta
-   raw / bronze / silver / gold
-       |
-       v
-Gold Star Schema
-   dim_customer (SCD2)
-   dim_product
-   dim_store
-   dim_date
-   fact_sales
-       |
-       v
-Synapse Serverless SQL
-   gold.* views
-```
+<img width="1312" height="1199" alt="architecture_image" src="https://github.com/user-attachments/assets/bdbc4839-3cc0-45f7-85db-b5df8e1e26ff" />
 
-![Architecture diagram](architecture/architecture.png)
-
-The architecture intentionally does not include ADF in the final version. ADF was tested as an external orchestrator, but the working Databricks Job already orchestrates ingestion and the Bronze/Silver/Gold processing chain.
 
 ## Project structure
 
